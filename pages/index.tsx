@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import TodoApp from "./components/TodoApp";
 
 const Home: NextPage = () => {
   return (
@@ -12,7 +13,9 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h2 className="font-medium text-red-400">Hello World</h2>
+      <section className="flex justify-center items-center h-screen">
+        <TodoApp />
+      </section>
     </div>
   );
 };
