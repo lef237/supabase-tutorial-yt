@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## このリポジトリについて
+Shin-sibainu様のこちらの動画、およびリポジトリを参考に学習致しました。
+
+- [【Supabase入門】Todoアプリを作りながらSupabaseをNext.jsとTypescriptで学んでみよう - YouTube](https://youtu.be/CZlZgRo0bZ4)
+- [Shin-sibainu/supabase-tutorial-for-yt](https://github.com/Shin-sibainu/supabase-tutorial-for-yt)
+
 ## Getting Started
 
 First, run the development server:
