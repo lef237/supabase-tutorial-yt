@@ -24,7 +24,7 @@ const TodoApp = () => {
           Add
         </button>
       </form>
-      <TodoList />
+      <TodoList todos={todos} />
     </section>
   );
 };
