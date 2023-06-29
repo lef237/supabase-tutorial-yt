@@ -1,4 +1,5 @@
 import React from "react";
+import TodoList from "./TodoList";
 
 const TodoApp = () => {
   return (
@@ -10,6 +11,7 @@ const TodoApp = () => {
           Add
         </button>
       </form>
+      <TodoList />
     </section>
   );
 };
