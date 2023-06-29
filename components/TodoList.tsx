@@ -1,12 +1,20 @@
 import React from "react";
 import { Todo } from "../utils/interface";
+import { deleteTodo, getAllTodos } from "../utils/supabaseFunctions";
 
 type Props = {
   todos: Todo[];
+  setTodos: React.Dispatch<any>;
 };
 
 const TodoList = (props: Props) => {
-  const { todos } = props;
+  const { todos, setTodos } = props;
+
+  const handleDelete = async (id: number) => {
+    await deleteTodo(id);
+    let todos = await getAllTodos();
+    setTodos(todos);
+  };
 
   return (
     <div>
@@ -18,7 +26,12 @@ const TodoList = (props: Props) => {
             className="flex bg-orange-200 rounded-md mt-2 mb-2 p-2 justify-between"
           >
             <li className="font-medium">✅ {todo.title}</li>
-            <span className="cursor-pointer">❌</span>
+            <span
+              className="cursor-pointer"
+              onClick={() => handleDelete(todo.id)}
+            >
+              ❌
+            </span>
           </div>
         ))}
       </ul>
