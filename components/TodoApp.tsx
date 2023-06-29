@@ -22,7 +22,8 @@ const TodoApp = () => {
 
     //Todoの追加
     await addTodo(title);
-    console.log(title);
+    let todos = await getAllTodos();
+    setTodos(todos);
 
     setTitle("");
   };
@@ -35,6 +36,7 @@ const TodoApp = () => {
           type="text"
           className="mr-2 shadow-lg p-1 outline-none"
           onChange={(e) => setTitle(e.target.value)}
+          value={title}
         />
         <button className="shadow-md border-2 px-1 py-1 rounded-lg bg-green-200">
           Add
